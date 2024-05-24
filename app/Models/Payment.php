@@ -22,4 +22,9 @@ class Payment extends Model
     {
         return $this->hasOne(User::class);
     }
+
+    public function students()
+    {
+        return $this->hasMany(Student::class);
+    }
 }

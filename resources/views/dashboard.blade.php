@@ -1,17 +1,26 @@
-<x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Dashboard') }}
-        </h2>
-    </x-slot>
 
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 text-gray-900">
-                    {{ __("You're logged in!") }}
-                </div>
+<!DOCTYPE html>
+<html lang="en">
+   @include('dash.inc.head')
+    <body class="sb-nav-fixed">
+      @include('dash.inc.topnav')
+
+
+
+
+
+        <div id="layoutSidenav">
+
+          @include('dash.inc.leftsidenav')
+           
+            <div id="layoutSidenav_content">
+
+              @include('dash.inc.main')
+              @include('dash.inc.footer')
+                
+                
             </div>
         </div>
-    </div>
-</x-app-layout>
+        @include('dash.inc.scripts')
+    </body>
+</html>
