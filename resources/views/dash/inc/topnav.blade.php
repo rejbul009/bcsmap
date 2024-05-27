@@ -1,4 +1,4 @@
-<nav class="sb-topnav navbar navbar-expand navbar-dark bg-success">
+<nav class="sb-topnav navbar navbar-expand navbar-dark bg-custom">
     <!-- Navbar Brand-->
         <a class="navbar-brand ps-3" href="{{ url("index.html") }}">BcsMap</a>
         <!-- Sidebar Toggle-->

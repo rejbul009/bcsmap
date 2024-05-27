@@ -1,6 +1,6 @@
 <div id="layoutSidenav_nav">
-    <nav class="sb-sidenav accordion sb-sidenav bg-success" id="sidenavAccordion">
-      <nav class="sb-sidenav accordion sb-sidenav bg-success text-white" id="sidenavAccordion">
+    <nav class="sb-sidenav accordion sb-sidenav bg-custom" id="sidenavAccordion">
+      <nav class="sb-sidenav accordion sb-sidenav bg-custom text-white" id="sidenavAccordion">
         <div class="sb-sidenav-menu">
             <div class="nav">
                
@@ -8,15 +8,16 @@
                     <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                     Profile
                 </a>
-                <div class="sb-sidenav-menu-heading">Interface</div>
-                <a class="nav-link collapsed" href="{{ url('#') }}" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
-                    <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                <div class="sb-sidenav-menu-heading">Subject </div>
+<a class="nav-link collapsed" href=
+                    View Document 1
+                </a>                    <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
                     Layouts
                     <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                 </a>
                 <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                     <nav class="sb-sidenav-menu-nested nav">
-                        <a class="nav-link" href="{{ url('layout-static.html') }}">Static Navigation</a>
+
                         <a class="nav-link" href="{{ url('layout-sidenav-light.html') }}">Light Sidenav</a>
                     </nav>
                 </div>
@@ -53,8 +54,8 @@
                 </div>
                 <div class="sb-sidenav-menu-heading">Addons</div>
                 <a class="nav-link" href="{{ url('charts.html') }}">
-                    <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
-                    Charts
+                    <a class="nav-link" href="{{ route('tests.show', ['test' => 5]) }}">View Test</a>
+
                 </a>
                 <a class="nav-link" href="{{ url('tables.html') }}">
                     <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
@@ -66,5 +67,13 @@
             <div class="small">Logged in as:</div>
             Start Bootstrap
         </div>
+        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+            @csrf
+        </form>
+        
+        <a class="nav-link" href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+            <div class="sb-nav-link-icon"><i class="fas fa-sign-out-alt"></i></div>
+            Logout
+        </a>
     </nav>
   </div>

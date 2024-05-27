@@ -18,10 +18,9 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
-        'name',
-        'email',
-        'password',
+        'name', 'email', 'password', 'google_id', 'avatar', 'google_token'
     ];
+    
 
     /**
      * The attributes that should be hidden for serialization.
@@ -54,6 +53,9 @@ class User extends Authenticatable
         // For example, if you have an 'is_admin' column in your users table:
         return $this->is_admin === true;
     }
-
+    public function student()
+    {
+        return $this->hasOne(Student::class);
+    }
    
 }

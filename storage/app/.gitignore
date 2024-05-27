@@ -1,3 +1,4 @@
 *
 !public/
 !.gitignore
+echo "storage/app/google-credentials.json" >> .gitignore

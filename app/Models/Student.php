@@ -20,4 +20,13 @@ class Student extends Model
     {
         return $this->belongsTo(Payment::class);
     }
+    public function answers()
+    {
+        return $this->hasMany(Answer::class);
+    }
+
+    public function results()
+    {
+        return $this->hasMany(Result::class);
+    }
 }

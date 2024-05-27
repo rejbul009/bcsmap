@@ -59,7 +59,7 @@
                         <input type="file" id="image" name="image" class="form-control-file">
                     </div>
                     <div class="form-group">
-                        <button type="submit" class="btn btn-primary">Update Profile</button>
+                        <button type="submit" class="btn btn-primary bg-custom">Update Profile</button>
                     </div>
                 </form>
             </div>

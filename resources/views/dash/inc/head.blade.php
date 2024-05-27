@@ -10,4 +10,12 @@
   <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
   <link href="{{ asset("/user/css/styles.css") }}" rel="stylesheet" />
   <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+
+<style>
+.bg-custom {
+    background-color: #1e4b41 !important;
+}
+
+  </style>
+
 </head>
